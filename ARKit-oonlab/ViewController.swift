@@ -31,7 +31,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         jet!.name = "ship"
         
         // particle system
-        let particleSystem = SCNParticleSystem(named: "fire.scnp", inDirectory: nil)
+        let particleSystem = SCNParticleSystem(named: "asap.scnp", inDirectory: nil)
         let particleNode = SCNNode()
         particleNode.addParticleSystem(particleSystem!)
         
@@ -46,6 +46,25 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         scene.rootNode.addChildNode(jet!)
         
         sceneView.scene = scene
+        self.registerTapGesture()
+    }
+    
+    func registerTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action:
+            #selector(tappedOnScene(sender:)))
+        self.sceneView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func tappedOnScene(sender: UITapGestureRecognizer){
+        guard let shipNode = self.sceneView.scene.rootNode.childNode(withName: "ship",
+            recursively: true) else {
+            return
+        }
+        
+        shipNode.physicsBody = SCNPhysicsBody(type: SCNPhysicsBodyType.dynamic, shape: nil)
+        shipNode.physicsBody?.isAffectedByGravity = false
+        shipNode.physicsBody?.damping = 0.0
+        shipNode.physicsBody?.applyForce(SCNVector3Make(0, 50, -50), asImpulse: false)
     }
     
     override func viewWillAppear(_ animated: Bool) {
