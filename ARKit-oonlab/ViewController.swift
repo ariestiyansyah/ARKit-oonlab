@@ -24,9 +24,27 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let jetscene = SCNScene(named: "art.scnassets/ship.scn")!
+        
+        // Jet system
+        let jet = jetscene.rootNode.childNode(withName: "ship", recursively: true)
+        jet!.name = "ship"
+        
+        // particle system
+        let particleSystem = SCNParticleSystem(named: "fire.scnp", inDirectory: nil)
+        let particleNode = SCNNode()
+        particleNode.addParticleSystem(particleSystem!)
+        
+        // add particle to ship
+        jet!.addChildNode(particleNode)
+        particleNode.position = SCNVector3Make(0, 0, -1)
+        jet!.position = SCNVector3Make(0, 0.5, -0.8)
+        jet!.eulerAngles = SCNVector3Make(-70, 135, 0)
         
         // Set the scene to the view
+        let scene = SCNScene()
+        scene.rootNode.addChildNode(jet!)
+        
         sceneView.scene = scene
     }
     

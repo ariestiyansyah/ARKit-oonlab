@@ -13,6 +13,8 @@
 		2E232C2C20FB52A4002E5EAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E232C2A20FB52A4002E5EAA /* Main.storyboard */; };
 		2E232C2E20FB52A6002E5EAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E232C2D20FB52A6002E5EAA /* Assets.xcassets */; };
 		2E232C3120FB52A6002E5EAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E232C2F20FB52A6002E5EAA /* LaunchScreen.storyboard */; };
+		2E232C3A20FB55CF002E5EAA /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E232C3820FB55CF002E5EAA /* spark.png */; };
+		2E232C3B20FB55CF002E5EAA /* fire.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 2E232C3920FB55CF002E5EAA /* fire.scnp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		2E232C2D20FB52A6002E5EAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E232C3020FB52A6002E5EAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E232C3220FB52A6002E5EAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E232C3820FB55CF002E5EAA /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		2E232C3920FB55CF002E5EAA /* fire.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = fire.scnp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				2E232C2D20FB52A6002E5EAA /* Assets.xcassets */,
 				2E232C2F20FB52A6002E5EAA /* LaunchScreen.storyboard */,
 				2E232C3220FB52A6002E5EAA /* Info.plist */,
+				2E232C3820FB55CF002E5EAA /* spark.png */,
+				2E232C3920FB55CF002E5EAA /* fire.scnp */,
 			);
 			path = "ARKit-oonlab";
 			sourceTree = "<group>";
@@ -125,8 +131,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E232C3A20FB55CF002E5EAA /* spark.png in Resources */,
 				2E232C2720FB52A4002E5EAA /* art.scnassets in Resources */,
 				2E232C3120FB52A6002E5EAA /* LaunchScreen.storyboard in Resources */,
+				2E232C3B20FB55CF002E5EAA /* fire.scnp in Resources */,
 				2E232C2E20FB52A6002E5EAA /* Assets.xcassets in Resources */,
 				2E232C2C20FB52A4002E5EAA /* Main.storyboard in Resources */,
 			);
